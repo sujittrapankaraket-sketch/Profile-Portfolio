@@ -103,6 +103,32 @@
   });
 })();
 
+// ── Scroll reveal ──
+const scrollRevealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollRevealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.scroll-reveal').forEach(el => scrollRevealObserver.observe(el));
+
+// ── Lottie TMK icon ──
+(function initLottie() {
+  const el = document.getElementById('lottie-tmk');
+  if (!el || typeof lottie === 'undefined') return;
+  lottie.loadAnimation({
+    container: el,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'date-palm.json'
+  });
+  // Tint to blue via CSS filter
+  el.style.filter = 'invert(35%) sepia(90%) saturate(600%) hue-rotate(200deg)';
+})();
+
 // ── Nav scroll effect ──
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
