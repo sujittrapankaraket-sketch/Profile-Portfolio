@@ -901,20 +901,51 @@ img { max-width: 100%; display: block; }
 .img-placeholder.sm { padding: 12px; font-size: 0.72rem; }
 
 /* ── FUTURE PLAN ── */
+/* ── Auto-scroll work gallery ── */
+.work-gallery-wrap {
+  overflow: hidden; border-radius: 12px;
+  margin: 20px 0; cursor: grab;
+}
+.work-gallery-wrap:active { cursor: grabbing; }
+.work-gallery-track {
+  display: flex; gap: 10px;
+  width: max-content;
+  animation: galleryScroll 28s linear infinite;
+}
+.work-gallery-wrap:hover .work-gallery-track { animation-play-state: paused; }
+.wg-img {
+  width: 200px; height: 150px;
+  object-fit: cover; border-radius: 10px;
+  flex-shrink: 0; cursor: zoom-in;
+  transition: transform .2s, box-shadow .2s;
+  border: 1px solid rgba(37,99,235,.15);
+}
+.wg-img:hover { transform: scale(1.04); box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+@keyframes galleryScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* Tools section */
 .tools-section { margin-top: 24px; }
-.tools-grid { display: flex; flex-direction: column; gap: 10px; }
-.tools-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .tools-cat {
-  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .08em; color: var(--blue-600);
-  min-width: 110px; flex-shrink: 0;
+  min-width: 130px; flex-shrink: 0;
 }
 .tools-section .tag {
   background: rgba(37,99,235,.08); color: var(--navy);
-  border: 1px solid rgba(37,99,235,.18);
-  font-size: 0.75rem;
+  border: 1px solid rgba(37,99,235,.18); font-size: 0.75rem;
 }
+.skills-block { margin-bottom: 14px; }
+.skills-block-title {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--gray-400);
+  margin-bottom: 8px; padding-bottom: 4px;
+  border-bottom: 1px solid rgba(37,99,235,.12);
+}
+.skills-cats { display: flex; flex-direction: column; gap: 7px; }
+.skills-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 
 .future-plan {
   margin-top: 24px; background: rgba(255,255,255,.5);

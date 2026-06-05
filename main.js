@@ -351,12 +351,12 @@ const albums = {
   'safety-wh': {
     title: 'Safety Warehouse Solution',
     sub: 'Proof of Concept · Aruba BLE + RFID',
-    images: ['safety-wh/1.png','safety-wh/2.png','safety-wh/3.png']
+    images: ['safety-wh/1.png','safety-wh/2.png','safety-wh/3.png','safety-wh/4.jpg','safety-wh/5.jpg']
   },
   'smart-vision': {
     title: 'Smart Vision Camera Solution',
     sub: 'Proof of Concept · Industrial Camera · QR Mapping',
-    images: ['smart-vision/1.png']
+    images: ['smart-vision/1.png','smart-vision/1758.jpg','smart-vision/1733.jpg','smart-vision/1735.jpg','smart-vision/2207.jpg','smart-vision/2217.jpg','smart-vision/2219.jpg']
   },
   'saas-laundry': {
     title: 'SaaS Laundry Management',
@@ -367,11 +367,20 @@ const albums = {
     title: 'TMK — กระบวนการทำงาน',
     sub: 'Agricultural Trading System · Jun 2568 – ปัจจุบัน',
     images: [
+      'tmk-work/ui-1.png',
+      'tmk-work/ui-2.png',
+      'tmk-work/ui-3.png',
+      'tmk-work/ui-4.png',
       'tmk-work/bpmn.png',
       'tmk-work/usecase-5.png',
       'tmk-work/usecase-9.png',
       'tmk-work/usecase-10.png'
     ]
+  },
+  'tmk-photos': {
+    title: 'TMK — ประมวลภาพการทำงาน',
+    sub: 'Agricultural Trading System · ภาพบรรยากาศและการทำงานจริง',
+    images: [1,2,3,4,5,6,7,8,9,10].map(n => `tmk-photos/${n}.jpg`)
   }
 };
 
