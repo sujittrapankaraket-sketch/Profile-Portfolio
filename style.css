@@ -371,7 +371,7 @@ img { max-width: 100%; display: block; }
 /* Career section — animated soft blue gradient */
 .section-dark {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background: #e8f4ff;
 }
 .section-dark::before {
@@ -679,6 +679,7 @@ img { max-width: 100%; display: block; }
   background: rgba(255,255,255,.65); border: 1px solid rgba(37,99,235,.18);
   border-radius: var(--radius); padding: 20px 24px; margin-bottom: 24px;
   backdrop-filter: blur(10px);
+  overflow: hidden; max-width: 100%;
 }
 .vt-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
 .vt-period { font-size: 0.72rem; color: var(--blue-600); font-weight: 600; margin-bottom: 3px; }
@@ -927,7 +928,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* Tools section */
-.tools-section { margin-top: 24px; }
+.tools-section { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(37,99,235,.1); }
 .tools-cat {
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .08em; color: var(--blue-600);
@@ -937,7 +938,7 @@ img { max-width: 100%; display: block; }
   background: rgba(37,99,235,.08); color: var(--navy);
   border: 1px solid rgba(37,99,235,.18); font-size: 0.75rem;
 }
-.skills-block { margin-bottom: 14px; }
+.skills-block { margin-bottom: 18px; }
 .skills-block-title {
   font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .1em; color: var(--gray-400);
@@ -945,7 +946,7 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid rgba(37,99,235,.12);
 }
 .skills-cats { display: flex; flex-direction: column; gap: 7px; }
-.skills-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.skills-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; max-width: 100%; }
 
 .future-plan {
   margin-top: 24px; background: rgba(255,255,255,.5);
